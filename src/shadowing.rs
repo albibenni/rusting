@@ -6,7 +6,7 @@ fn example(param: i32) {
     println!("Param before new scope: {}", param);
 
     {
-        let param: i32 = 35;
+        let param: String = "Ciao".to_string();
         println!("Param inside new scope: {}", param);
     }
 
