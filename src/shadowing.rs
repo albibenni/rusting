@@ -2,7 +2,7 @@ fn main() {
     example(5);
 }
 
-fn example(param: i32) {
+fn example(param: i32) -> () {
     println!("Param before new scope: {}", param);
 
     {
