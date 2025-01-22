@@ -1,4 +1,6 @@
+#[path = "./basic/shadowing.rs"]
 mod shadowing;
 fn main() {
-    shadowing::shadowing();
+    print!("Hello I'm rusting")
+    //shadowing::shadowing();
 }
