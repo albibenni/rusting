@@ -1,4 +1,4 @@
-fn main() {
+pub fn shadowing() {
     example(5);
 }
 
