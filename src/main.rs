@@ -6,6 +6,10 @@ mod guessing_game;
 
 #[path = "./basic/functions.rs"]
 mod functions;
+
+#[path = "./basic/array_and_slices.rs"]
+mod array_and_slices;
+
 fn main() {
     println!("---- Hello I'm rusting ---");
     //shadowing::shadowing();
