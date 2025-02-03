@@ -28,7 +28,8 @@ fn main() {
     // ownership::owning_basic();
     // ownership::heap_add_suffix();
     // ownership::cloning_heap_add_suffix();
-    reference_borrow::using_reference();
-    reference_arrays::arr_reference();
+    //reference_borrow::using_reference();
+    reference_borrow::playing_with_it();
+    //reference_arrays::arr_reference();
     println!("---- End rusting ----");
 }
