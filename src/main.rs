@@ -16,6 +16,9 @@ mod ownership;
 #[path = "./basic/reference_borrow.rs"]
 mod reference_borrow;
 
+#[path = "./basic/reference_arrays.rs"]
+mod reference_arrays;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -26,5 +29,6 @@ fn main() {
     // ownership::heap_add_suffix();
     // ownership::cloning_heap_add_suffix();
     reference_borrow::using_reference();
+    reference_arrays::arr_reference();
     println!("---- End rusting ----");
 }
