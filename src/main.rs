@@ -19,6 +19,9 @@ mod reference_borrow;
 #[path = "./basic/reference_arrays.rs"]
 mod reference_arrays;
 
+#[path = "./basic/referece_dereference_implicit_explicit.rs"]
+mod referece_dereference_implicit_explicit;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -29,7 +32,8 @@ fn main() {
     // ownership::heap_add_suffix();
     // ownership::cloning_heap_add_suffix();
     //reference_borrow::using_reference();
-    reference_borrow::playing_with_it();
+    //reference_borrow::playing_with_it();
     //reference_arrays::arr_reference();
+    referece_dereference_implicit_explicit::explicit_implicit_dereference();
     println!("---- End rusting ----");
 }
