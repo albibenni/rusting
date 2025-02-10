@@ -10,3 +10,10 @@ pub fn another_one() {
 fn print_type_of<T>(_: &T) {
     println!("{}", std::any::type_name::<T>());
 }
+
+pub fn trying_boxes() {
+    let a = Box::new([1; 100]);
+    print_type_of(&a);
+    let b = a;
+    print_type_of(&b);
+}
