@@ -28,6 +28,9 @@ mod another_refernce;
 #[path = "./basic/struct_f.rs"]
 mod struct_f;
 
+#[path = "./basic/iterate.rs"]
+mod iterate;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -43,7 +46,9 @@ fn main() {
     //referece_dereference_implicit_explicit::explicit_implicit_dereference();
     // another_refernce::another_one();
     // another_refernce::trying_boxes();
-    struct_f::testing_struct_tr_imp();
-    struct_f::some_tuple();
+    // struct_f::testing_struct_tr_imp();
+    // struct_f::some_tuple();
+    iterate::iter_myway();
+    iterate::another_one();
     println!("---- End rusting ----");
 }
