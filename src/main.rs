@@ -25,6 +25,9 @@ mod referece_dereference_implicit_explicit;
 #[path = "./basic/another_refernce.rs"]
 mod another_refernce;
 
+#[path = "./basic/struct_f.rs"]
+mod struct_f;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -38,6 +41,8 @@ fn main() {
     //reference_borrow::playing_with_it();
     //reference_arrays::arr_reference();
     //referece_dereference_implicit_explicit::explicit_implicit_dereference();
-    another_refernce::another_one();
+    // another_refernce::another_one();
+    // another_refernce::trying_boxes();
+    struct_f::testing_struct_tr_imp();
     println!("---- End rusting ----");
 }
