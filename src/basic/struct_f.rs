@@ -35,4 +35,10 @@ pub fn some_tuple() {
     let tt: (i32, String) = (5, String::from("Tuple"));
     let (n, s) = tt;
     println!("destructuring tuple: {} {}", n, s);
+
+    let multi_tuple: (u16, String, i16, f32) = (2, String::from("Tuple super"), -10, 1.22);
+    println!(
+        "multi tuple, {}, {}, {}, {}",
+        multi_tuple.0, multi_tuple.1, multi_tuple.2, multi_tuple.3
+    );
 }
