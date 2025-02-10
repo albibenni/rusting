@@ -44,5 +44,6 @@ fn main() {
     // another_refernce::another_one();
     // another_refernce::trying_boxes();
     struct_f::testing_struct_tr_imp();
+    struct_f::some_tuple();
     println!("---- End rusting ----");
 }

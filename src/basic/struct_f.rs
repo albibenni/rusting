@@ -30,3 +30,9 @@ pub fn testing_struct_tr_imp() {
         println!("Pattern matching with struct,{} {} ", y, z)
     }
 }
+
+pub fn some_tuple() {
+    let tt: (i32, String) = (5, String::from("Tuple"));
+    let (n, s) = tt;
+    println!("destructuring tuple: {} {}", n, s);
+}
