@@ -11,4 +11,6 @@ pub fn another_one() {
     new_l
         .iter()
         .for_each(|el| println!("closure with iter and map: {} ", el));
+    // cool print
+    println!("{:?}", new_l);
 }
