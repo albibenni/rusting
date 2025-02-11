@@ -31,6 +31,9 @@ mod struct_f;
 #[path = "./basic/iterate.rs"]
 mod iterate;
 
+#[path = "./basic/custom_collect.rs"]
+mod custom_collect;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -48,7 +51,8 @@ fn main() {
     // another_refernce::trying_boxes();
     // struct_f::testing_struct_tr_imp();
     // struct_f::some_tuple();
-    iterate::iter_myway();
-    iterate::another_one();
+    // iterate::iter_myway();
+    // iterate::another_one();
+    custom_collect::coll();
     println!("---- End rusting ----");
 }
