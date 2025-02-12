@@ -34,6 +34,12 @@ mod iterate;
 #[path = "./basic/custom_collect.rs"]
 mod custom_collect;
 
+#[path = "./basic/some_iter.rs"]
+mod some_iter;
+
+#[path = "./basic/lines_read_file.rs"]
+mod lines_read_file;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -53,6 +59,8 @@ fn main() {
     // struct_f::some_tuple();
     // iterate::iter_myway();
     // iterate::another_one();
-    custom_collect::coll();
+    // custom_collect::coll();
+    // some_iter::some_ite();
+    lines_read_file::read_the_file();
     println!("---- End rusting ----");
 }
