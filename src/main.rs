@@ -62,5 +62,6 @@ fn main() {
     // custom_collect::coll();
     // some_iter::some_ite();
     lines_read_file::read_the_file();
+    lines_read_file::read_file_with_filters();
     println!("---- End rusting ----");
 }
