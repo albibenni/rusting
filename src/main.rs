@@ -74,5 +74,6 @@ fn main() {
     //enum_try::use_enum();
     //enum_sol::using_struct_and_enums();
     option::is_option_ye();
+    option::using_option();
     println!("---- End rusting ----");
 }
