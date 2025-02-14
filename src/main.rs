@@ -46,6 +46,8 @@ mod enum_try;
 #[path = "./basic/enum_sol.rs"]
 mod enum_sol;
 
+#[path = "./basic/option.rs"]
+mod option;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -70,6 +72,7 @@ fn main() {
     // lines_read_file::read_the_file();
     // lines_read_file::read_file_with_filters();
     //enum_try::use_enum();
-    enum_sol::using_struct_and_enums();
+    //enum_sol::using_struct_and_enums();
+    option::is_option_ye();
     println!("---- End rusting ----");
 }
