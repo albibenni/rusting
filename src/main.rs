@@ -43,6 +43,9 @@ mod lines_read_file;
 #[path = "./basic/enum_try.rs"]
 mod enum_try;
 
+#[path = "./basic/enum_sol.rs"]
+mod enum_sol;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -66,6 +69,7 @@ fn main() {
     // some_iter::some_ite();
     // lines_read_file::read_the_file();
     // lines_read_file::read_file_with_filters();
-    enum_try::use_enum();
+    //enum_try::use_enum();
+    enum_sol::using_struct_and_enums();
     println!("---- End rusting ----");
 }
