@@ -6,4 +6,8 @@ pub fn is_option_ye() {
 
     print_type_of(&foo);
     print_type_of(&expl);
+
+    if let Some(x) = foo {
+        println!("Lifting Option without unwrap: {}", x);
+    }
 }
