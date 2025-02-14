@@ -7,7 +7,7 @@ pub fn another_one() {
     print_type_of(&*my_ref);
 }
 
-fn print_type_of<T>(_: &T) {
+pub fn print_type_of<T>(_: &T) {
     println!("{}", std::any::type_name::<T>());
 }
 
