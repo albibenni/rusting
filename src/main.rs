@@ -51,6 +51,9 @@ mod option;
 
 #[path = "./exercises/practice_pattern_matching.rs"]
 mod practice_pattern_matching;
+
+#[path = "./exercises/practice_option.rs"]
+mod practice_option;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -78,6 +81,7 @@ fn main() {
     //enum_sol::using_struct_and_enums();
     // option::is_option_ye();
     // option::using_option();
-    practice_pattern_matching::practice();
+    //practice_pattern_matching::practice();
+    practice_option::practice();
     println!("---- End rusting ----");
 }
