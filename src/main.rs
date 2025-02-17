@@ -54,6 +54,9 @@ mod practice_pattern_matching;
 
 #[path = "./exercises/practice_option.rs"]
 mod practice_option;
+
+#[path = "./exercises/error_handling.rs"]
+mod error_handling;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -82,6 +85,7 @@ fn main() {
     // option::is_option_ye();
     // option::using_option();
     //practice_pattern_matching::practice();
-    practice_option::practice();
+    //practice_option::practice();
+    error_handling::error_practice_and_args();
     println!("---- End rusting ----");
 }
