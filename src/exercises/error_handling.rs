@@ -7,7 +7,6 @@ pub fn error_practice_and_args() {
 
     let mut path = PATH_TEST_BASE.to_owned();
     path.push_str(&arg);
-    println!("{}", path);
 
     std::fs::read_to_string(&path)
         .expect("unable to read the file provided")
