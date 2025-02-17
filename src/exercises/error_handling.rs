@@ -23,4 +23,10 @@ pub fn error_practice_and_args() {
                 println!("Line not a number");
             }
         });
+
+    std::fs::read_to_string(&path)
+        .expect("unable to read file")
+        .lines()
+        .filter_map(|line| line.parse::<usize>().ok())
+        .for_each(|line| println!("removing strings and keeping numbers only: {}", line));
 }
