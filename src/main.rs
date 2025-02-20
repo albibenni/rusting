@@ -60,6 +60,9 @@ mod error_handling;
 
 #[path = "./basic/borrow/struct.rs"]
 mod struct_r;
+
+#[path = "./basic/traits/example.rs"]
+mod example;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -90,6 +93,8 @@ fn main() {
     //practice_pattern_matching::practice();
     //practice_option::practice();
     //error_handling::error_practice_and_args();
-    struct_r::doit();
+    // struct_r::doit();
+    // struct_r::re_doit();
+    example::doit();
     println!("---- End rusting ----");
 }
