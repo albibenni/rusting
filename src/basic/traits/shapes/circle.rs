@@ -1,4 +1,4 @@
-use crate::multi::Area;
+use super::area::Area;
 
 pub struct Circle {
     pub x: f64,
