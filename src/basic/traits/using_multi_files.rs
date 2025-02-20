@@ -1,31 +1,15 @@
-#[path = "./shapes.rs"]
 mod shapes;
-
-trait Area {
-    fn area(&self) -> f64;
-}
-
-impl Area for shapes::Rectangle {
-    fn area(&self) -> f64 {
-        return self.width * self.height;
-    }
-}
-
-impl Area for shapes::Circle {
-    fn area(&self) -> f64 {
-        return self.radius * self.radius * std::f64::consts::PI;
-    }
-}
+use shapes::{area::Area, circle::Circle, rectangle::Rectangle};
 
 pub fn doit_multi() {
-    let rect = shapes::Rectangle {
+    let rect = Rectangle {
         x: 0.0,
         y: 0.0,
         width: 10.0,
         height: 10.0,
     };
 
-    let circle = shapes::Circle {
+    let circle = Circle {
         x: 0.0,
         y: 0.0,
         radius: 10.0,
@@ -33,4 +17,5 @@ pub fn doit_multi() {
 
     println!("{}", rect.area());
     println!("{}", circle.area());
+    println!("Weird stuff traits on types: {}", 6.9.area());
 }
