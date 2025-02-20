@@ -63,6 +63,9 @@ mod struct_r;
 
 #[path = "./basic/traits/example.rs"]
 mod example;
+
+#[path = "./basic/traits/using_multi_files.rs"]
+mod multi;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -95,6 +98,7 @@ fn main() {
     //error_handling::error_practice_and_args();
     // struct_r::doit();
     // struct_r::re_doit();
-    example::doit();
+    //example::doit();
+    multi::doit_multi();
     println!("---- End rusting ----");
 }
