@@ -57,6 +57,9 @@ mod practice_option;
 
 #[path = "./exercises/error_handling.rs"]
 mod error_handling;
+
+#[path = "./basic/borrow/struct.rs"]
+mod struct_r;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -86,6 +89,7 @@ fn main() {
     // option::using_option();
     //practice_pattern_matching::practice();
     //practice_option::practice();
-    error_handling::error_practice_and_args();
+    //error_handling::error_practice_and_args();
+    struct_r::doit();
     println!("---- End rusting ----");
 }
