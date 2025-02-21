@@ -18,4 +18,8 @@ pub fn doit_multi() {
     println!("{}", rect.area());
     println!("{}", circle.area());
     println!("Weird stuff traits on types: {}", 6.9.area());
+
+    let def_ref = Rectangle::default();
+    println!("{}", def_ref.area());
+    println!("printing the rectangle: {}", def_ref);
 }
