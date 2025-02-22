@@ -24,4 +24,8 @@ pub fn doit_multi() {
     println!("{}", def_ref.area());
     println!("printing the rectangle: {}", def_ref);
     println!("printing the circle: {}", def_circle);
+
+    for point in def_ref {
+        println!("print iter rectangle: {:?}", point);
+    }
 }
