@@ -25,9 +25,9 @@ pub fn doit_multi() {
     println!("printing the rectangle: {}", def_ref);
     println!("printing the circle: {}", def_circle);
 
-    for point in def_ref {
-        println!("print iter rectangle: {:?}", point);
-    }
+    // for point in def_ref {
+    //     println!("print iter rectangle: {:?}", point);
+    // }
 
     let rec1 = Rectangle::default();
     let rec2 = Rectangle::default();
