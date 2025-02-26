@@ -1,5 +1,33 @@
 mod shapes;
-use shapes::{area::Area, circle::Circle, collisions::Collidable, rectangle::Rectangle};
+use std::str::FromStr;
+
+use anyhow::{Ok, Result};
+use shapes::{
+    area::Area,
+    circle::Circle,
+    collisions::{Collidable, Contains, Points},
+    rectangle::Rectangle,
+};
+
+#[derive(Debug)]
+enum Shape {
+    Circle(Circle),
+    Rectangle(Rectangle),
+}
+
+impl FromStr for Shape {
+    type Err = anyhow::Error;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        let (shape, data) = s.split_once(" ").unwrap_or(("", ""));
+        match shape {
+            "rect" => return Ok(Shape::Rectangle(data.parse()?)),
+            "rectangle" => return Ok(Shape::Rectangle(data.parse()?)),
+            "circle" => return Ok(Shape::Circle(data.parse()?)),
+            _ => return Err(anyhow::anyhow!("bad shape")),
+        }
+    }
+}
 
 pub fn doit_multi() {
     let rect = Rectangle {
@@ -46,4 +74,33 @@ pub fn doit_multi() {
     println!("Collision r1, c1: {}", coll_r1_c1);
     println!("Collision c1, c2: {}", coll_c1_c2);
     println!("Collision c1, r2: {}", coll_c2_r2);
+}
+
+impl Points for Shape {
+    fn points(&self) -> shapes::collisions::PointIter {
+        match self {
+            Shape::Rectangle(r) => return r.points(),
+            Shape::Circle(c) => return c.points(),
+        }
+    }
+}
+
+impl Contains for Shape {
+    fn contains_point(&self, point: (f64, f64)) -> bool {
+        match self {
+            Shape::Circle(c) => return c.contains_point(point),
+            Shape::Rectangle(r) => return r.contains_point(point),
+        }
+    }
+}
+pub fn reading_shaped_from_file() -> Result<()> {
+    println!("-------- newwww -----");
+    let shapes = std::fs::read_to_string("shapes")?
+        .lines()
+        .filter_map(|x| x.parse::<Shape>().ok())
+        .collect::<Vec<_>>();
+
+    println!("test read {:?}", shapes);
+
+    return Ok(());
 }

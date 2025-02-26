@@ -1,10 +1,11 @@
-use std::fmt::Display;
+use std::{fmt::Display, str::FromStr};
 
 use super::{
     area::Area,
     collisions::{Contains, Points},
 };
 
+#[derive(Debug)]
 pub struct Rectangle {
     pub x: f64,
     pub y: f64,
@@ -56,6 +57,24 @@ impl Display for Rectangle {
         );
     }
 }
+
+impl FromStr for Rectangle {
+    type Err = anyhow::Error;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        let parts = s.split(" ").collect::<Vec<_>>();
+        if parts.len() != 4 {
+            return Err(anyhow::anyhow!("bad rectangle from str"));
+        };
+        return Ok(Rectangle {
+            x: parts[0].parse()?,
+            y: parts[1].parse()?,
+            width: parts[2].parse()?,
+            height: parts[3].parse()?,
+        });
+    }
+}
+
 // -- Generic impl done
 // impl Collidable<Rectangle> for Rectangle {
 //     fn collide(&self, other: &Rectangle) -> bool {

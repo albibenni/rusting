@@ -100,5 +100,7 @@ fn main() {
     // struct_r::re_doit();
     //example::doit();
     multi::doit_multi();
+    let res = multi::reading_shaped_from_file();
+    println!("res of reading is: {:?}", res);
     println!("---- End rusting ----");
 }
