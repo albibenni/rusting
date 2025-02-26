@@ -1,5 +1,5 @@
 mod shapes;
-use std::str::FromStr;
+use std::{fmt::Display, str::FromStr};
 
 use anyhow::{Ok, Result};
 use shapes::{
@@ -76,7 +76,7 @@ pub fn doit_multi() {
     println!("Collision c1, r2: {}", coll_c2_r2);
 }
 
-impl Points for Shape {
+impl Points for &Shape {
     fn points(&self) -> shapes::collisions::PointIter {
         match self {
             Shape::Rectangle(r) => return r.points(),
@@ -85,7 +85,7 @@ impl Points for Shape {
     }
 }
 
-impl Contains for Shape {
+impl Contains for &Shape {
     fn contains_point(&self, point: (f64, f64)) -> bool {
         match self {
             Shape::Circle(c) => return c.contains_point(point),
@@ -93,6 +93,16 @@ impl Contains for Shape {
         }
     }
 }
+
+impl Display for &Shape {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Shape::Circle(c) => return write!(f, "{}", c),
+            Shape::Rectangle(r) => return write!(f, "{}", r),
+        }
+    }
+}
+
 pub fn reading_shaped_from_file() -> Result<()> {
     println!("-------- newwww -----");
     let shapes = std::fs::read_to_string("shapes")?
@@ -102,5 +112,11 @@ pub fn reading_shaped_from_file() -> Result<()> {
 
     println!("test read {:?}", shapes);
 
+    shapes
+        .iter()
+        .skip(1)
+        .zip(shapes.iter().take(shapes.len() - 1))
+        .filter(|(a, b)| -> bool { a.collide(b) })
+        .for_each(|(a, b)| println!("{} collide with {}", a, b));
     return Ok(());
 }
