@@ -66,6 +66,9 @@ mod example;
 
 #[path = "./basic/traits/using_multi_files.rs"]
 mod multi;
+
+#[path = "./exercises/by_practice/variables.rs"]
+mod variables;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -99,8 +102,10 @@ fn main() {
     // struct_r::doit();
     // struct_r::re_doit();
     //example::doit();
-    multi::doit_multi();
-    let res = multi::reading_shaped_from_file();
-    println!("res of reading is: {:?}", res);
+    // multi::doit_multi();
+    // let res = multi::reading_shaped_from_file();
+    // println!("res of reading is: {:?}", res);
+
+    variables::variab();
     println!("---- End rusting ----");
 }
