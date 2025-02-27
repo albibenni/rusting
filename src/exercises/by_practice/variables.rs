@@ -4,4 +4,11 @@ pub fn variab() {
 
     assert_eq!(x, 5);
     println!("Success!");
+
+    let x = define_x();
+    println!("{}, world", x);
+}
+
+fn define_x() -> &'static str {
+    return "hello";
 }
