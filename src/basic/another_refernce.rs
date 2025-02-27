@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub fn another_one() {
     let just_ez: Vec<_> = vec![1, 2, 3];
     let my_ref = &just_ez[1];

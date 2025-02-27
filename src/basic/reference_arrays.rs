@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn arr_reference() {
     let arr = [2, 3, 4, 5];
     let div = arr.len() / 2;

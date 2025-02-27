@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 struct Rectangle {
     x: f64,
     y: f64,

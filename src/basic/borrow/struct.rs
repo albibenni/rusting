@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 #[derive(Debug)]
 struct Item {
     count: usize,
@@ -28,7 +30,7 @@ pub fn doit() {
 
 pub fn re_doit() {
     let mut items = vec![Item { count: 1 }];
-    let first = items.get_mut(0);
+    let _first = items.get_mut(0);
     let second = items.get_mut(1);
     //println!("{:?}", first); // error
     println!("{:?}", second); // flow doesnt overlap on error

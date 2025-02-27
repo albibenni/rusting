@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 use crate::another_refernce::print_type_of;
 
 pub fn is_option_ye() {

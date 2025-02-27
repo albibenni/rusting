@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn coll() {
     let data = vec![1, 3, 5];
     let mut foo = data.iter().map(|x| x + 1);

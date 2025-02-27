@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 const PATH_TEST_BASE: &str = "src/exercises/";
 
 pub fn error_practice_and_args() {

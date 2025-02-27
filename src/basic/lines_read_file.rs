@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 const PATH_LINES: &str = "src/basic/lines.txt";
 pub fn read_the_file() {
     println!("Read file ----");

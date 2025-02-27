@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub fn practice() {
     let ve = Some(5);
     let un = None;

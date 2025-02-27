@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn owning_basic() {
     let n = 5;
     let y = plus_one(n);

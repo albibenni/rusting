@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 use self::Color::*;
 use std::slice::Iter;
 
@@ -40,7 +41,7 @@ pub fn use_enum() {
     }
 
     let foo_green = Color::Green.is_green();
-    let foo_blue= Color::Green.is_green_parts();
-    println!("using impl is green, {}", foo_green );
-    println!("using impl is green part, {}", foo_blue );
+    let foo_blue = Color::Green.is_green_parts();
+    println!("using impl is green, {}", foo_green);
+    println!("using impl is green part, {}", foo_blue);
 }

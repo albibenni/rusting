@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn iter_myway() {
     let my_v = vec![1, 2, 3, 5, 32, 2];
     for ele in my_v {

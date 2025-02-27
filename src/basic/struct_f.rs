@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 struct MyStruct {
     x: i32,
     y: i32,
@@ -26,6 +28,7 @@ pub fn testing_struct_tr_imp() {
     println!("using impl");
     foo.test();
 
+    #[allow(warnings)]
     if let MyStruct { y, z, .. } = foo {
         println!("Pattern matching with struct,{} {} ", y, z)
     }

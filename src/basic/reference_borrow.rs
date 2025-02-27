@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn using_reference() {
     let m1 = String::from("Hello with reference");
     let m2 = String::from("I'm rusting");

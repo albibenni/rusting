@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub fn practice() {
     let ve = vec![1, 2, 3];
     let p = real_practice(&ve, 2);

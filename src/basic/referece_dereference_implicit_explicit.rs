@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn explicit_implicit_dereference() {
     let x: Box<i32> = Box::new(-1);
     let x_abs1 = i32::abs(*x); // explicit dereference
