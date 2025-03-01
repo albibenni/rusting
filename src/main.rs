@@ -69,6 +69,9 @@ mod multi;
 
 #[path = "./exercises/by_practice/variables.rs"]
 mod variables;
+
+#[path = "./exercises/by_practice/types.rs"]
+mod types;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -106,6 +109,7 @@ fn main() {
     // let res = multi::reading_shaped_from_file();
     // println!("res of reading is: {:?}", res);
 
-    variables::variab();
+    //variables::variab();
+    types::using_types();
     println!("---- End rusting ----");
 }
