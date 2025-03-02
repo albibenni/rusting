@@ -16,6 +16,8 @@ pub fn using_types() {
     float_eq();
     conversion();
     range_incl();
+
+    bitwise();
 }
 
 // Get the type of given variable, return a string representation of the type  , e.g "i8", "u8", "i32", "u32"
