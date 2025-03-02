@@ -12,6 +12,7 @@ pub fn using_types() {
 
     println!("____");
     float_eq();
+    conversion();
 }
 
 // Get the type of given variable, return a string representation of the type  , e.g "i8", "u8", "i32", "u32"
@@ -39,4 +40,16 @@ fn float_eq() {
     assert!(a + b == 30, "a = {}, b = {}", a, b);
 
     println!("Success!");
+}
+
+fn conversion() {
+    let mut sum = 0;
+    for i in -3..2 {
+        sum += i
+    }
+    assert!(sum == -5);
+
+    for c in 'a'..='z' {
+        println!("{}", c as u16);
+    }
 }
