@@ -31,6 +31,7 @@ fn float_eq() {
     assert!(res < 0.01);
     //assert!(a + b == 0.30, "a = {}, b = {}", a, b);
     assert!(0.1_f32 + 0.2_f32 == 0.3_f32);
+    assert!(0.1f32 + 0.2f32 == 0.3f32);
     assert!((0.1_f64 + 0.2 - 0.3).abs() < 0.001);
 
     let a = 3;
