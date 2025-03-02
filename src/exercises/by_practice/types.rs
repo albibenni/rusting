@@ -1,4 +1,6 @@
 #![allow(dead_code)]
+
+use std::ops::{Range, RangeInclusive};
 pub fn using_types() {
     assert_eq!(i8::MAX, 127);
     assert_eq!(u8::MAX, 255);
@@ -13,6 +15,7 @@ pub fn using_types() {
     println!("____");
     float_eq();
     conversion();
+    range_incl();
 }
 
 // Get the type of given variable, return a string representation of the type  , e.g "i8", "u8", "i32", "u32"
@@ -52,4 +55,12 @@ fn conversion() {
     for c in 'a'..='z' {
         println!("{}", c as u16);
     }
+}
+
+fn range_incl() {
+    assert_eq!((1..5), Range { start: 1, end: 5 });
+    assert_eq!((1..=5), RangeInclusive::new(1, 5));
+
+    println!("assert_eq!((1..=5), RangeInclusive::new(1, 5))");
+    println!("Success!");
 }
