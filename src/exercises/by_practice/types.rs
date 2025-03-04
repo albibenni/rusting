@@ -18,6 +18,10 @@ pub fn using_types() {
     range_incl();
 
     bitwise();
+    char_size();
+
+    let c1 = '中';
+    print_char(&c1);
 }
 
 // Get the type of given variable, return a string representation of the type  , e.g "i8", "u8", "i32", "u32"
@@ -90,4 +94,27 @@ fn bitwise() {
     println!("0011 XOR 0101 is {:04b}", 0b0011u32 ^ 0b0101);
     println!("1 << 5 is {}", 1u32 << 5);
     println!("0x80 >> 2 is 0x{:x}", 0x80u32 >> 2);
+}
+
+fn char_size() {
+    let c1 = 'a';
+    let size1 = size_of_val(&c1);
+    println!("c1 type: {} size: {}", type_of(&c1), size1);
+    assert_eq!(size_of_val(&c1), 4);
+    let c2 = '中';
+    let size2 = size_of_val(&c2);
+    println!("c2 type: {} size: {}", type_of(&c2), size2);
+    assert_eq!(size_of_val(&c2), 4);
+    let s1 = "a";
+    let size3 = size_of_val(&s1);
+    println!("s1 type: {} size: {}", type_of(&s1), size3);
+    assert_eq!(size_of_val(&s1), 16);
+    let unit: () = ();
+    let size4 = size_of_val(&unit);
+    println!("unit type: {} size: {}", type_of(&unit), size4);
+    assert_eq!(size_of_val(&unit), 0);
+}
+
+fn print_char(c: &char) {
+    println!("{}", c);
 }
