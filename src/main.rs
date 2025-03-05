@@ -72,6 +72,9 @@ mod variables;
 
 #[path = "./exercises/by_practice/types.rs"]
 mod types;
+
+#[path = "./exercises/by_practice/statements_expressions.rs"]
+mod statements_expressions;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -110,6 +113,7 @@ fn main() {
     // println!("res of reading is: {:?}", res);
 
     //variables::variab();
-    types::using_types();
+    //types::using_types();
+    statements_expressions::using_it();
     println!("---- End rusting ----");
 }
