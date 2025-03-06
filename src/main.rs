@@ -73,8 +73,13 @@ mod variables;
 #[path = "./exercises/by_practice/types.rs"]
 mod types;
 
+#[path = "./exercises/by_practice/functions.rs"]
+mod functions_f;
 #[path = "./exercises/by_practice/statements_expressions.rs"]
 mod statements_expressions;
+
+#[path = "./exercises/by_practice/ownership.rs"]
+mod ownership_ex;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -114,6 +119,8 @@ fn main() {
 
     //variables::variab();
     //types::using_types();
-    statements_expressions::using_it();
+    //statements_expressions::using_it();
+    //functions_f::do_it();
+    ownership_ex::own_it();
     println!("---- End rusting ----");
 }
