@@ -5,6 +5,12 @@ pub fn own_it() {
     two();
     println!("three----");
     three();
+    println!("some----");
+    use_copy();
+    println!("try----");
+    tr();
+    println!("dereference----");
+    dereference();
 }
 
 fn one() {
@@ -51,4 +57,34 @@ fn give_ownership() -> String {
     println!("into_bytes: {:?}", _s);
     println!("as_bytes: {:?}", _s2);
     return s;
+}
+
+// Don't use clone ,use copy instead
+fn use_copy() {
+    let x = (1, 2, (), "hello");
+    let y = x;
+    println!("{:?}, {:?}", x, y);
+}
+
+fn tr() {
+    let s = String::from("Hello ");
+
+    let mut s1 = s;
+
+    s1.push_str("World!");
+
+    println!("{}", s1);
+}
+
+fn dereference() {
+    let x = Box::new(5);
+    let mut y = Box::new(1);
+    //
+    *y = 4;
+
+    assert_eq!(*x, 5);
+
+    println!("Success! {:?}", x);
+    assert_ne!(*x, *y);
+    println!("Mut with dereference y! {:?}", *y);
 }
