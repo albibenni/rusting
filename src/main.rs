@@ -80,6 +80,8 @@ mod statements_expressions;
 
 #[path = "./exercises/by_practice/ownership.rs"]
 mod ownership_ex;
+#[path = "./exercises/workshop/p1.rs"]
+mod p1;
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -121,6 +123,7 @@ fn main() {
     //types::using_types();
     //statements_expressions::using_it();
     //functions_f::do_it();
-    ownership_ex::own_it();
+    // ownership_ex::own_it();
+    p1::println_population();
     println!("---- End rusting ----");
 }

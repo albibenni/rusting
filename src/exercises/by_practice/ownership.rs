@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn own_it() {
     println!("OWNERSHIP ----");
     one();
