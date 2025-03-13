@@ -1,3 +1,5 @@
+use basic::super_nested;
+
 #[path = "./basic/shadowing.rs"]
 mod shadowing;
 
@@ -82,6 +84,15 @@ mod statements_expressions;
 mod ownership_ex;
 #[path = "./exercises/workshop/p1.rs"]
 mod p1;
+// mod basic {
+//     pub mod super_nested;
+// }
+
+mod basic {
+    pub mod super_nested {
+        pub mod more_nested;
+    }
+}
 fn main() {
     println!("---- Hello I'm rusting ----");
     //shadowing::shadowing();
@@ -124,6 +135,8 @@ fn main() {
     //statements_expressions::using_it();
     //functions_f::do_it();
     // ownership_ex::own_it();
+    //super_nested::test_nested();
+    super_nested::more_nested::example();
     p1::println_population();
     println!("---- End rusting ----");
 }
