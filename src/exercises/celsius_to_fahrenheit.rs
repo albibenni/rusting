@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 use std::{env::Args, fmt::Display};
 
 pub struct CelFah {

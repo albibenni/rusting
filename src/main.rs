@@ -145,7 +145,8 @@ fn main() {
     super_nested::more_nested::example();
     //p1::println_population();
 
-    let res = exercises::celsius_to_fahrenheit::cel_to_fah_and_back(&mut args);
+    //let res = exercises::celsius_to_fahrenheit::cel_to_fah_and_back(&mut args);
+    let res = exercises::nth_fib::get_fib(&mut args);
     println!("{}", res);
     println!("---- End rusting ----");
 }
