@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn println_population() {
     let city_name = "Rustville";
 

@@ -1,3 +1,5 @@
+use std::env::args;
+
 use basic::super_nested;
 
 #[path = "./basic/shadowing.rs"]
@@ -93,8 +95,12 @@ mod basic {
         pub mod more_nested;
     }
 }
+
+mod exercises;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
+    let mut args = args();
     //shadowing::shadowing();
     //guessing_game::guess();
     // let res = functions::return_value();
@@ -137,6 +143,9 @@ fn main() {
     // ownership_ex::own_it();
     //super_nested::test_nested();
     super_nested::more_nested::example();
-    p1::println_population();
+    //p1::println_population();
+
+    let res = exercises::celsius_to_fahrenheit::cel_to_fah_and_back(&mut args);
+    println!("{}", res);
     println!("---- End rusting ----");
 }
