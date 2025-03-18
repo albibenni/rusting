@@ -100,7 +100,7 @@ mod exercises;
 
 fn main() {
     println!("---- Hello I'm rusting ----");
-    let mut args = args();
+    let mut _args = args();
     //shadowing::shadowing();
     //guessing_game::guess();
     // let res = functions::return_value();
@@ -146,7 +146,8 @@ fn main() {
     //p1::println_population();
 
     //let res = exercises::celsius_to_fahrenheit::cel_to_fah_and_back(&mut args);
-    let res = exercises::nth_fib::get_fib(&mut args);
-    println!("{}", res);
+    //let res = exercises::nth_fib::get_fib(&mut args);
+    //println!("{}", res);
+    exercises::lyric::print_lyric();
     println!("---- End rusting ----");
 }
