@@ -12,6 +12,10 @@ pub fn own_it() {
     tr();
     println!("dereference----");
     dereference();
+    println!("eight----");
+    eight();
+    println!("nine----");
+    ninth();
 }
 
 fn one() {
@@ -88,4 +92,49 @@ fn dereference() {
     println!("Success! {:?}", x);
     assert_ne!(*x, *y);
     println!("Mut with dereference y! {:?}", *y);
+}
+
+// Partial move
+
+fn example() {
+    #[derive(Debug)]
+    struct Person {
+        name: String,
+        age: Box<u8>,
+    }
+
+    let person = Person {
+        name: String::from("Alice"),
+        age: Box::new(20),
+    };
+
+    // `name` is moved out of person, but `age` is referenced
+    let Person { name, ref age } = person;
+
+    println!("The person's age is {}", age);
+
+    println!("The person's name is {}", name);
+
+    // Error! borrow of partially moved value: `person` partial move occurs
+    //println!("The person struct is {:?}", person);
+
+    // `person` cannot be used but `person.age` can be used as it is not moved
+    println!("The person's age from person struct is {}", person.age);
+}
+
+fn eight() {
+    let t = (String::from("hello"), String::from("world"));
+
+    let _s = t.0;
+
+    // Modify this line only, don't use `_s`
+    println!("{:?}", t.1);
+}
+fn ninth() {
+    let t = (String::from("hello"), String::from("world"));
+
+    // Fill the blanks
+    let (ref s1, ref s2) = t;
+
+    println!("{:?}, {:?}, {:?}", s1, s2, t); // -> "hello", "world", ("hello", "world")
 }

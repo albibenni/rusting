@@ -148,6 +148,7 @@ fn main() {
     //let res = exercises::celsius_to_fahrenheit::cel_to_fah_and_back(&mut args);
     //let res = exercises::nth_fib::get_fib(&mut args);
     //println!("{}", res);
-    exercises::lyric::print_lyric();
+    //exercises::lyric::print_lyric();
+    exercises::by_practice::ownership::own_it();
     println!("---- End rusting ----");
 }

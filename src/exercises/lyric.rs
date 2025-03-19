@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub fn print_lyric() {
     let mut paragrapth = String::new();
     for i in 1..=12 {
