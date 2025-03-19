@@ -149,6 +149,7 @@ fn main() {
     //let res = exercises::nth_fib::get_fib(&mut args);
     //println!("{}", res);
     //exercises::lyric::print_lyric();
-    exercises::by_practice::ownership::own_it();
+    //exercises::by_practice::ownership::own_it();
+    exercises::by_practice::ref_own::ref_own_it();
     println!("---- End rusting ----");
 }
