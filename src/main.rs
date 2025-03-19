@@ -1,7 +1,5 @@
 use std::env::args;
 
-use basic::super_nested;
-
 #[path = "./basic/shadowing.rs"]
 mod shadowing;
 
@@ -142,7 +140,7 @@ fn main() {
     //functions_f::do_it();
     // ownership_ex::own_it();
     //super_nested::test_nested();
-    super_nested::more_nested::example();
+    //super_nested::more_nested::example();
     //p1::println_population();
 
     //let res = exercises::celsius_to_fahrenheit::cel_to_fah_and_back(&mut args);
@@ -150,6 +148,7 @@ fn main() {
     //println!("{}", res);
     //exercises::lyric::print_lyric();
     //exercises::by_practice::ownership::own_it();
-    exercises::by_practice::ref_own::ref_own_it();
+    //exercises::by_practice::ref_own::ref_own_it();
+    exercises::slicing::slice();
     println!("---- End rusting ----");
 }
