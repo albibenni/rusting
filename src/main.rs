@@ -96,6 +96,8 @@ mod basic {
 
 mod exercises;
 
+mod strings;
+
 fn main() {
     println!("---- Hello I'm rusting ----");
     let mut _args = args();
@@ -149,6 +151,7 @@ fn main() {
     //exercises::lyric::print_lyric();
     //exercises::by_practice::ownership::own_it();
     //exercises::by_practice::ref_own::ref_own_it();
-    exercises::slicing::slice();
+    // exercises::slicing::slice();
+    strings::some_strings::some_string();
     println!("---- End rusting ----");
 }
