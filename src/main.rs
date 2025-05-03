@@ -152,6 +152,7 @@ fn main() {
     //exercises::by_practice::ownership::own_it();
     //exercises::by_practice::ref_own::ref_own_it();
     // exercises::slicing::slice();
-    strings::some_strings::some_string();
+    //strings::some_strings::some_string();
+    strings::some_strings::other_string();
     println!("---- End rusting ----");
 }
